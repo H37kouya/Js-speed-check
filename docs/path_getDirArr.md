@@ -2,7 +2,7 @@
 
 ## 概要
 
-Castをするのと、ifを使うほうが早いのか。
+Castをするのと、ifを使うのはどちらが早いのか。
 
 ## 結果
 
@@ -37,3 +37,7 @@ export const getDirArr__IfSlice = (p) => {
   return dirname(p).split("/");
 }
 ```
+
+## 関連
+
+- [Boolean型を1か0にするとき、castとifのどちらが早いか](./convertToNumber_castOrBunki.md)
