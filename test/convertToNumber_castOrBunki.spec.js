@@ -1,6 +1,6 @@
 import { measurePerfLog } from "../src/performance";
 
-describe("convertToNumber_castOrBunki", () => {
+describe.skip("convertToNumber_castOrBunki", () => {
   it("cast", () => {
     const func = () => {
       for (let i = 0; i < 100000; i++) {
