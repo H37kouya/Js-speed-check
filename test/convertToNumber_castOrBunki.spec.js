@@ -1,6 +1,6 @@
 import { measurePerfLog } from "../src/performance";
 
-describe("convertToNumber_castOrBunki", () => {
+describe.skip("convertToNumber_castOrBunki", () => {
   it("数値が返ってくるか", () => {
     expect(Number(true)).toBe(1)
     expect(Number(false)).toBe(0)
