@@ -56,6 +56,33 @@ describe.skip('path', () => {
         "ddd",
       ]);
     });
+
+    it("getDirArr__IfSlice2", () => {
+      expect(path.getDirArr__IfSlice2("aaa/bbb/ccc/ddd/eee")).toEqual([
+        "aaa",
+        "bbb",
+        "ccc",
+        "ddd",
+      ]);
+      expect(path.getDirArr__IfSlice2("aaa/bbb/ccc/ddd/eee.cpp")).toEqual([
+        "aaa",
+        "bbb",
+        "ccc",
+        "ddd",
+      ]);
+      expect(path.getDirArr__IfSlice2("/aaa/bbb/ccc/ddd/eee.cpp")).toEqual([
+        "aaa",
+        "bbb",
+        "ccc",
+        "ddd",
+      ]);
+      expect(path.getDirArr__IfSlice2("/aaa/bbb/ccc/ddd/eee/")).toEqual([
+        "aaa",
+        "bbb",
+        "ccc",
+        "ddd",
+      ]);
+    });
   });
 
   describe("getExtがすべて同じ結果を返すか", () => {
@@ -80,6 +107,16 @@ describe.skip('path', () => {
     };
 
     measurePerfLog(func, "getDirArr__IfSlice");
+  });
+
+  it("getDirArr__IfSlice2", () => {
+    const func = () => {
+      for (let i = 0; i < 10000; i++) {
+        path.getDirArr__IfSlice2("/aaa/bbb/ccc/ddd/eee/");
+      }
+    };
+
+    measurePerfLog(func, "getDirArr__IfSlice2");
   });
 
   it("getDirArr__CastNumber", () => {

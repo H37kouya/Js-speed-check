@@ -24,6 +24,15 @@ export const getDirArr__IfSlice = (p) => {
 }
 
 /**
+ * ディレクトリの配列を取得する(分岐のタイミングを変えた)
+ *
+ * @param { String } p
+ * @returns { String[] }
+ */
+export const getDirArr__IfSlice2 = (p) =>
+  dirname(p.slice(p.startsWith("/") ? 1 : 0)).split("/");
+
+/**
  * 正規表現を用いて、拡張子を得る
  *
  * @param { String } f
