@@ -30,5 +30,7 @@
     "lint-staged": "^10.1.6",
     "prettier": "^2.0.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  }
 }
